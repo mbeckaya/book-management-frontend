@@ -1,7 +1,6 @@
 # book-management-frontend
 This project is a frontend for creating, reading, updating and deleting book entries.
-
-[//]: # (There is a separate [book-management-api]&#40;https://github.com/mischbeckaya/book-management-api&#41; repository for the API.)
+There is a separate [book-management-api](https://github.com/mischbeckaya/book-management-api) repository for the API.
 
 
 ## Requirements
