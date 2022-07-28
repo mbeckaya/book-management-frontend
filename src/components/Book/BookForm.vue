@@ -1,5 +1,5 @@
 <template>
-  <div class="bookForm p-3">
+  <section class="bookForm p-3">
     <div class="row">
       <div class="col-12 col-sm-8 col-xl-4">
         <h2 v-if="mode === 'create'">Create a book</h2>
@@ -121,7 +121,7 @@
         </button>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

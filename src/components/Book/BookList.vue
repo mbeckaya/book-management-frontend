@@ -1,75 +1,75 @@
 <template>
-  <div class="bookList my-4">
+  <section class="bookList my-4">
     <Alert :message="message" variant="success"/>
 
     <div class="table-responsive-lg mt-4">
       <table class="table table-bordered table-hover table-sm">
         <thead>
-        <tr>
-          <TableHeadSort
-              caption="Title"
-              field="title"
-              :sortBy="sortingSortBy"
-              :orderBy="sortingOrderBy"
-              :handleClick="handleSort"
-          />
-          <TableHeadSort
-              caption="Author"
-              field="author"
-              :sortBy="sortingSortBy"
-              :orderBy="sortingOrderBy"
-              :handleClick="handleSort"
-          />
-          <TableHeadSort
-              caption="Publisher"
-              field="publisher"
-              :sortBy="sortingSortBy"
-              :orderBy="sortingOrderBy"
-              :handleClick="handleSort"
-          />
-          <TableHeadSort
-              caption="Price"
-              field="price"
-              :sortBy="sortingSortBy"
-              :orderBy="sortingOrderBy"
-              :handleClick="handleSort"
-          />
-          <TableHeadSort
-              caption="Pages"
-              field="pages"
-              :sortBy="sortingSortBy"
-              :orderBy="sortingOrderBy"
-              :handleClick="handleSort"
-          />
-          <th>Handback</th>
-          <th>Paperback</th>
-          <th>Action</th>
-        </tr>
+          <tr>
+            <TableHeadSort
+                caption="Title"
+                field="title"
+                :sortBy="sortingSortBy"
+                :orderBy="sortingOrderBy"
+                :handleClick="handleSort"
+            />
+            <TableHeadSort
+                caption="Author"
+                field="author"
+                :sortBy="sortingSortBy"
+                :orderBy="sortingOrderBy"
+                :handleClick="handleSort"
+            />
+            <TableHeadSort
+                caption="Publisher"
+                field="publisher"
+                :sortBy="sortingSortBy"
+                :orderBy="sortingOrderBy"
+                :handleClick="handleSort"
+            />
+            <TableHeadSort
+                caption="Price"
+                field="price"
+                :sortBy="sortingSortBy"
+                :orderBy="sortingOrderBy"
+                :handleClick="handleSort"
+            />
+            <TableHeadSort
+                caption="Pages"
+                field="pages"
+                :sortBy="sortingSortBy"
+                :orderBy="sortingOrderBy"
+                :handleClick="handleSort"
+            />
+            <th>Handback</th>
+            <th>Paperback</th>
+            <th>Action</th>
+          </tr>
         </thead>
         <tbody>
-        <tr v-for="book in bookList" :key="book.id">
-          <td>{{ book.title }}</td>
-          <td>{{ book.author }}</td>
-          <td>{{ book.publisher }}</td>
-          <td>{{ book.price }}</td>
-          <td>{{ book.pages }}</td>
-          <td>{{ showYesOrNo(book.isHandback) }}</td>
-          <td>{{ showYesOrNo(book.isPaperback) }}</td>
-          <td>
-            <router-link
-                :to="{ name: 'bookEdit', params: { id: book.id }}"
-                class="btn btn-primary me-2"
-            >
-              <i class="bi bi-pencil"></i>
-            </router-link>
-            <button
-                @click="handleDelete(book.id)"
-                class="btn btn-danger"
-            >
-              <i class="bi bi-trash-fill"></i>
-            </button>
-          </td>
-        </tr>
+          <tr v-for="book in bookList" :key="book.id">
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.publisher }}</td>
+            <td>{{ book.price }}</td>
+            <td>{{ book.pages }}</td>
+            <td>{{ showYesOrNo(book.isHandback) }}</td>
+            <td>{{ showYesOrNo(book.isPaperback) }}</td>
+            <td>
+              <router-link
+                  :to="{ name: 'bookEdit', params: { id: book.id }}"
+                  class="btn btn-primary me-2"
+              >
+                <i class="bi bi-pencil"></i>
+              </router-link>
+              <button
+                  @click="handleDelete(book.id)"
+                  class="btn btn-danger"
+              >
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -81,7 +81,7 @@
         :nextPage="paginationNextPage"
         :handleClick="handlePagination"
     />
-  </div>
+  </section>
 </template>
 
 <script>

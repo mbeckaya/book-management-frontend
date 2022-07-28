@@ -1,7 +1,7 @@
 <template>
-  <div class="bookEdit">
+  <section class="bookEdit">
     <BookForm mode="edit" />
-  </div>
+  </section>
 </template>
 
 <script>

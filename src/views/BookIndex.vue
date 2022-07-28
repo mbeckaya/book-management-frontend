@@ -1,7 +1,7 @@
 <template>
-  <div class="bookIndex">
+  <section class="bookIndex">
     <BookList />
-  </div>
+  </section>
 </template>
 
 <script>

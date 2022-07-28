@@ -1,11 +1,11 @@
 <template>
-  <div
+  <section
       v-if="message"
       class="alert"
       :class="[variant === 'success' ? 'alert-success' : 'alert-danger']"
   >
     {{ message }}
-  </div>
+  </section>
 </template>
 
 <script>

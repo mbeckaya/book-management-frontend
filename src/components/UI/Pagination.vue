@@ -1,40 +1,42 @@
 <template>
-  <ul
-      v-if="totalPages > 0"
-      class="pagination"
-  >
-    <li class="page-item" :class="{ 'disabled': previousPage === 0 }">
-      <button
-          @click="handleClick(previousPage)"
-          :value="previousPage"
-          class="page-link"
-      >
-        Previous
-      </button>
-    </li>
-    <li
-        v-for="page in paginationList" :key="page"
-        class="page-item"
-        :class="{ active: this.currentPage === page }"
+  <section>
+    <ul
+        v-if="totalPages > 0"
+        class="pagination"
     >
-      <button
-          @click="handleClick(page)"
-          :value="page"
-          class="page-link"
+      <li class="page-item" :class="{ 'disabled': previousPage === 0 }">
+        <button
+            @click="handleClick(previousPage)"
+            :value="previousPage"
+            class="page-link"
+        >
+          Previous
+        </button>
+      </li>
+      <li
+          v-for="page in paginationList" :key="page"
+          class="page-item"
+          :class="{ active: this.currentPage === page }"
       >
-        {{ page }}
-      </button>
-    </li>
-    <li class="page-item" :class="{ 'disabled': totalPages === currentPage }">
-      <button
-          @click="handleClick(nextPage)"
-          :value="nextPage"
-          class="page-link"
-      >
-        Next
-      </button>
-    </li>
-  </ul>
+        <button
+            @click="handleClick(page)"
+            :value="page"
+            class="page-link"
+        >
+          {{ page }}
+        </button>
+      </li>
+      <li class="page-item" :class="{ 'disabled': totalPages === currentPage }">
+        <button
+            @click="handleClick(nextPage)"
+            :value="nextPage"
+            class="page-link"
+        >
+          Next
+        </button>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script>
